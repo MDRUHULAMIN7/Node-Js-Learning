@@ -2,30 +2,30 @@
 
 
 ## ✅ File System মডিউল ইমপোর্ট
-```js
 const fs = require("fs");
+
 📝 ফাইল তৈরি করা (Create File)
-Sync:
+✅ Sync:
 
 js
 Copy
 Edit
 fs.writeFileSync("./test.txt", "hey there");
-Async:
+✅ Async:
 
 js
 Copy
 Edit
 fs.writeFile("./test.txt", "hey there async", (err) => {});
 📖 ফাইল পড়া (Read File)
-Sync:
+✅ Sync:
 
 js
 Copy
 Edit
 const result = fs.readFileSync("./contacts.txt", "utf-8");
 console.log(result);
-Async:
+✅ Async:
 
 js
 Copy
@@ -43,13 +43,13 @@ Copy
 Edit
 fs.appendFileSync("./test.txt", `Ruhul\n`);
 📋 ফাইল কপি করা (Copy File)
-Sync:
+✅ Sync:
 
 js
 Copy
 Edit
 fs.copyFileSync("./test.txt", "./copy.txt");
-Async:
+✅ Async:
 
 js
 Copy
