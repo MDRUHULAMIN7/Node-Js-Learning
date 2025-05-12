@@ -1,16 +1,19 @@
 const http = require("http");
 const fs = require("fs");
+const express = require("express");
+const app = express();
 
-const myServer = http.createServer((req, res) => {
-    const log = `${Date.now()}: new req received\n`
+app.get("/", (req, res) => {
+  res.send("Hello from express Home page");
+});
+app.get("/about", (req, res) => {
+  res.send("Hello from express About page");
+});
 
-
-   fs.appendFile('log.txt',log,(err,data)=>{
-res.end("Hello from server");
-   })
+const myServer = http.createServer(app);
 
     
-})
+
 
 myServer.listen(8000,()=>{
     console.log("server is running on port 8000");
